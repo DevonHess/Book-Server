@@ -1,0 +1,6 @@
+Allow from all
+Satisfy Any
+Options -Indexes
+
+RewriteEngine on
+RewriteRule ^(.+)/$ /index.php?d=$1/ [B]
