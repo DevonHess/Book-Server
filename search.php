@@ -95,8 +95,10 @@
 					switch ($ext)
 					{
 						case 'htaccess':
-						case 'php':
+						case 'git':
+						case 'gitignore':
 						case 'ico':
+						case 'php':
 						
 						break;
 						default:

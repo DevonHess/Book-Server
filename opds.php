@@ -240,6 +240,9 @@
 			switch ($ext)
 			{
 				case 'htaccess':
+				case 'git':
+				case 'gitignore':
+				case 'ico':
 				case 'php':
 				
 				continue 2;
