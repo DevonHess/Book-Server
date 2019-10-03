@@ -87,7 +87,10 @@
 			switch ($ext)
 			{
 				case 'htaccess':
+				case 'git':
+				case 'gitignore':
 				case 'php':
+				case 'css':
 				case 'ico':
 					continue 2;
 				case 'epub':

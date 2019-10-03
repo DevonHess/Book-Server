@@ -34,35 +34,16 @@
 <html>	
 	<head>
 		<title>Broken Spine<?php echo (($dir)?' - ' . $dir:''); ?></title>
-		<style>
-			div div:nth-child(even)
-			{
-				background-color: Gainsboro;
-			}
-			.item
-			{
-				overflow: auto;
-				text-align: center;
-				padding: 10px;
-			}
-			.link
-			{
-				float: left;
-			}
-			.info
-			{
-				float: right;
-			}
-		</style>	
+		<link rel="stylesheet" href="/index.css">
 	</head>
 	<body>
 		<div>
-			<div class="item">
+			<div class="line big">
 				<?php
 					$back = preg_replace('/(.*\/).*\//','$1',$dir);
 					if ($back == '')
 					{
-						echo '<span class="link"><a>Broken Spine</a></span><span>/</span>';
+						echo '<span class="link">Broken Spine</span><span>/</span>';
 					}
 					else if ($back == $dir)
 					{
@@ -89,11 +70,12 @@
 						case 'gitignore':
 						case 'ico':
 						case 'php':
+						case 'css':
 						
 						continue 2;
 					}
 					
-					echo '<div class="item">';
+					echo '<div class="line big">';
 					if (!is_dir($dir.$files[$i]))
 					{
 						echo '<span class="link"><a href="' . $url .'">' . $name . '</a></span>';
